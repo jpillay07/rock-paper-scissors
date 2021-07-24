@@ -57,6 +57,22 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+//This function checks the user input
+function checkInput(input){
+    if(input === ROCK){
+        return false;
+    }
+    else if(input === SCISSORS){
+        return false;
+    }
+    else if(input === PAPER){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
 //This funtion plays a total of 5 rounds and determines the winner at the end
 function game(){
     let userChoice = "";
@@ -67,6 +83,12 @@ function game(){
     for(let i = 0; i < 5; i++){
         userChoice = prompt("Enter your choice.");
         userChoice = userChoice.toLowerCase();
+
+        while(checkInput(userChoice)){
+            alert("Please enter either rock, paper or scissors (check your spelling).");
+            userChoice = prompt("Enter your choice.");
+            userChoice = userChoice.toLowerCase();
+        }
         
         roundResult = playRound(userChoice, computerSelect());
         console.log(roundResult);
