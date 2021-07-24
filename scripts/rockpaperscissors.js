@@ -58,7 +58,7 @@ function playRound(playerSelection, computerSelection){
 }
 
 //This function checks the user input
-function checkInput(input){
+function checkBadInput(input){
     if(input === ROCK){
         return false;
     }
@@ -84,12 +84,14 @@ function game(){
         userChoice = prompt("Enter your choice.");
         userChoice = userChoice.toLowerCase();
 
-        while(checkInput(userChoice)){
+        //Check if the user's input is valid. If not, prompt the user until a valid input is given
+        while(checkBadInput(userChoice)){
             alert("Please enter either rock, paper or scissors (check your spelling).");
             userChoice = prompt("Enter your choice.");
             userChoice = userChoice.toLowerCase();
         }
         
+        //Play one round of the game
         roundResult = playRound(userChoice, computerSelect());
         console.log(roundResult);
     }
