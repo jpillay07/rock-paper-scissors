@@ -1,0 +1,199 @@
+body{
+    background-image: url(../images/rpsbg.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+/* =========================ANIMATION FOR TITLE=============================*/
+
+.glitch {
+    color: rgb(219, 245, 250);
+    font-size: 3vw;
+    animation: glitch 5s 5s infinite;
+  }
+  
+  .glitch::before {
+    content: attr(data-text);
+    left: -1px;
+    text-shadow: -5px 0 rgb(255, 2, 40);
+    overflow: hidden;
+    top: 0;
+    animation: noise-1 3s linear infinite alternate-reverse, glitch 5s 5.05s infinite;
+  }
+  
+  
+  
+  @keyframes glitch {
+    1%{
+      transform: rotateX(10deg) skewX(90deg);
+    }
+    2%{
+      transform: rotateX(0deg) skewX(0deg);
+    }
+  }
+  
+  @keyframes noise-1 {
+    $steps: 30;
+    @for $i from 1 through $steps {
+      #{percentage($i*(1/$steps))} {
+        $top: random(100);
+        $bottom: random(101 - $top);
+        clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+      }
+    }
+  }
+  
+  @keyframes noise-2 {
+    $steps: 30;
+    @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+        $top: random(100);
+        $bottom: random(101 - $top);
+        clip-path: inset(#{$top}px 0 #{$bottom}px 0);
+      }
+    }
+  }
+  
+  
+  
+  
+  @keyframes glitch-2 {
+    1%{
+      transform: rotateX(10deg) skewX(70deg);
+    }
+    2%{
+      transform: rotateX(0deg) skewX(0deg);
+    }
+  }
+/*=======================ENT TITLE ANIMATION==========================*/  
+
+.arena{
+    display: flex;
+    justify-content: space-around;
+}
+
+.middle-text{
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: white;
+    align-self: center;
+    font-size: 50px;
+}
+
+/*=======================PLAYER PROFILE BOX==========================*/ 
+
+.player-profile{
+    background-color: rgb(81, 241, 255);
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(255, 255, 255, 0.75);
+	color: #4fe8f9;
+	padding-top: 30px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: white;
+    align-self: center;
+    font-size: 50px;
+}
+
+.computer-profile{
+    background-color: rgba(164, 3, 3, 0.986);
+	border-radius: 5px;
+	box-shadow: 0px 10px 20px -10px rgba(255, 255, 255, 0.75);
+	color: #4fe8f9;
+	padding-top: 30px;
+	position: relative;
+	width: 350px;
+	max-width: 100%;
+	text-align: center;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: white;
+    align-self: center;
+    font-size: 50px;
+}
+
+.score-section{
+    display: flex;
+    justify-content: space-around;
+}
+
+fieldset {
+    border: 10px solid #fff;
+    width: 250px;
+}
+
+legend { 
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: white;
+    align-self: center;
+    font-size: 20px;
+}
+
+.choices{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.rock-button,.paper-button,.scissors-button{
+    background-color:rgba(0, 0, 0, 0.986);
+}
+
+.rock-button:active{
+    background-color:#4fe8f9;
+}
+
+.paper-button:active{
+    background-color:#4fe8f9;
+}
+
+.scissors-button:active{
+    background-color:#4fe8f9;
+}
+
+.instruction-section{
+    display: flex;
+    justify-content: center;
+}
+
+.instruction-text{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    color: white;
+    font-size: 20px;
+    border-right: .15em solid rgb(27, 229, 251); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 33% }
+  }
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(27, 229, 251); }
+  }

@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="text/javascript" src="scripts/js/rockpaperscissors.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet"> 
+    <title>Rock, Paper, Scissors</title>
+    <script type="text/javascript" src="js/rockpaperscissors.js"></script>
 </head>
 <body>
-    <p>
-        This is a rock paper scissor game, meant to run in the console. Open the console and type "game();" to run the game.
-    </p>
+    <div class="title">
+        <div class="glitch" data-text="ROCK PAPER SCISSORS"></div>
+    </div>
+    <div class="instruction-section">
+        <p class="instruction-text">It's you vs the computer. Best out of 5 rounds wins!</p>
+    </div>
+    <div class="arena">
+        <div class="player-profile">
+            <img src="/images/Player.png" width="300px">
+            <fieldset class="player-score"><legend>Player Score</legend>0</fieldset>
+        </div>
+        <div class="middle-text">VS</div>
+        <div class="computer-profile">
+            <img src="/images/computer.png" width="300px">
+            <fieldset class="computer-score"><legend>Computer Score</legend>0</fieldset>
+        </div>
+    </div>
+    <div class="choices">
+        <button class="rock-button"><img src="images/rockbutton.png"></button>
+        <button class="paper-button"><img src="images/paperbutton.png"></button>
+        <button class="scissors-button"><img src="images/scissorbutton.png"></button>
+    </div>
+
 </body>
 </html>
