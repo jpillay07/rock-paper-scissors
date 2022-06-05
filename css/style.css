@@ -153,7 +153,7 @@ legend {
 }
 
 .rock-button,.paper-button,.scissors-button{
-    background-color:rgba(0, 0, 0, 0.986);
+    background-color:rgba(0, 0, 0, 0);
 }
 
 .rock-button:active{
