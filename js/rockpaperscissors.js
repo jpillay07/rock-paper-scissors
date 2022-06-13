@@ -3,7 +3,6 @@
 //create variable to store the computer's score and the players score as well as strings for rock, paper and scissors
 let computerScore = 0;
 let playerScore = 0;
-let rounds = 0;
 
 //Create variables to store text output of respective scores
 const playerScoreText = document.getElementById("player-score");
@@ -85,8 +84,7 @@ function computerSelect(){
 //this function plays one round and compares the player input vs the computer input and determines the winner of the round
 function playRound(playerSelection, computerSelection){
 
-    //Increment the number of rounds played
-    rounds++;
+    
 
     //if the player and the computer have the same choice, its a tie, otherwise compare each choice, update the score and determine the winner
     if(playerSelection === computerSelection){
@@ -123,7 +121,7 @@ function playRound(playerSelection, computerSelection){
         roundResult.innerText = `Player Selection: ${playerSelection}, Computer Selection: ${computerSelection} - You win!`;
     }
 
-    if(rounds === 5){
+    if(playerScore === 5 || comproundsuterScore === 5){
         roundResult.innerText = "";
         disableButtons();
         playAgainButton.style.visibility = "visible";
@@ -154,7 +152,6 @@ function enableButtons(){
 function resetGame(){
     computerScore = 0;
     playerScore = 0;
-    rounds = 0;
 
     enableButtons();
 
