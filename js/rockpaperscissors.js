@@ -51,10 +51,10 @@ scissorsButton.addEventListener("click", () => {
 playAgainButton.addEventListener("click", () =>{
 
     //Change the button image when clicked
-    playAgainButtonImg.src = "/images/PlayAgain2.png";
+    playAgainButtonImg.src = "images/PlayAgain2.png";
 
     setTimeout(function(){
-        playAgainButtonImg.src = "/images/PlayAgain1.png";
+        playAgainButtonImg.src = "images/PlayAgain1.png";
         resetGame();
     }, 200);
 
