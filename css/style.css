@@ -208,6 +208,13 @@ legend {
   .play-again-button{
     background-color: transparent;
     border-color: transparent;
+    visibility: hidden;
   }
 
+  .round-result{
+    color: white;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+    font-size: 20px;
+    font-style: bold;
+  }
   
