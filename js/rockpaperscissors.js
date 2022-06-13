@@ -121,7 +121,7 @@ function playRound(playerSelection, computerSelection){
         roundResult.innerText = `Player Selection: ${playerSelection}, Computer Selection: ${computerSelection} - You win!`;
     }
 
-    if(playerScore === 5 || comproundsuterScore === 5){
+    if((playerScore == 5 || computerScore == 5)){
         roundResult.innerText = "";
         disableButtons();
         playAgainButton.style.visibility = "visible";
