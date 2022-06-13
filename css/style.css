@@ -203,6 +203,7 @@ legend {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 20%;
   }
 
   .play-again-button{
@@ -216,5 +217,7 @@ legend {
     font-family: 'Kdam Thmor Pro', sans-serif;
     font-size: 20px;
     font-style: bold;
+    text-align: center;
   }
+
   
