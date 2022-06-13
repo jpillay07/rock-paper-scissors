@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet"> 
     <title>Rock, Paper, Scissors</title>
-    <script type="text/javascript" src="js/rockpaperscissors.js"></script>
+    
 </head>
 <body>
     <div class="title">
@@ -21,19 +21,24 @@
     <div class="arena">
         <div class="player-profile">
             <img src="/images/Player.png" width="300px">
-            <fieldset class="player-score"><legend>Player Score</legend>0</fieldset>
+            <fieldset class="player-score" id="player-score"><legend>Player Score</legend>0</fieldset>
         </div>
-        <div class="middle-text">VS</div>
+        <div class="middle-section">
+            <div class="middle-text" id="middle-text">VS</div>
+            <button class="play-again-button" id="play-again-button"><img id="play-again-img" src="/images/PlayAgain1.png"></button>
+        </div>
         <div class="computer-profile">
             <img src="/images/computer.png" width="300px">
-            <fieldset class="computer-score"><legend>Computer Score</legend>0</fieldset>
+            <fieldset class="computer-score" id="computerScore"><legend>Computer Score</legend>0</fieldset>
         </div>
     </div>
     <div class="choices">
-        <button class="rock-button"><img src="images/rockbutton.png"></button>
-        <button class="paper-button"><img src="images/paperbutton.png"></button>
-        <button class="scissors-button"><img src="images/scissorbutton.png"></button>
+        <button class="rock-button" id="rock-button"><img src="images/rockbutton.png"></button>
+        <button class="paper-button" id="paper-button"><img src="images/paperbutton.png"></button>
+        <button class="scissors-button" id="scissors-button"><img src="images/scissorbutton.png"></button>
     </div>
+
+    <script type="text/javascript" src="js/rockpaperscissors.js"></script>
 
 </body>
 </html>

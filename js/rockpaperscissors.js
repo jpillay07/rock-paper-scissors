@@ -8,6 +8,28 @@ const ROCK = "rock";
 const PAPER = "paper";
 const SCISSORS = "scissors";
 
+//Get the button elements from the page and store them in const variables
+const rockButton = document.getElementById("rock-button");
+const paperButton = document.getElementById("paper-button");
+const scissorsButton = document.getElementById("scissors-button");
+
+//Get the button element for "Play Again" and the image within the button
+const playAgainButton = document.getElementById("play-again-button");
+const playAgainButtonImg = document.getElementById("play-again-img");
+
+playAgainButton.addEventListener("click", () =>{
+
+    //Change the button image when clicked
+    playAgainButtonImg.src = "/images/PlayAgain2.png";
+
+    setTimeout(function(){
+        playAgainButtonImg.src = "/images/PlayAgain1.png";
+    }, 200);
+
+    
+});
+
+
 //Create a function called computerSelect that randomly selects rock, paper or scissors and returns the selection in a string
 function computerSelect(){
     //Generate a number from 1 to 3 (1 = rock, 2 = paper and 3 = scissors and then based on the number, return the relevant string)
